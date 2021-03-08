@@ -27,4 +27,4 @@ Keyword: `Javascript`{: .label .label-purple } `Typescript`{: .label .label-purp
 * [시리즈] 사이드브로젝트
 * 코딩테스트 후기
 * 이론 공부하기: Javascript, Typescript 등등
-* 업무관련 단축키 및 자주쓰는 기능
+* [업무관련 단축키 및 자주쓰는 기능](docs/shortcuts)
