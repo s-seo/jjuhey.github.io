@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 자주쓰는 업무관련 기능정리
-nav_order: 4
+nav_order: 99
 ---
 
 # **단축키 정리**
