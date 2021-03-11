@@ -1,0 +1,12 @@
+---
+layout: post
+title: 블로그 유지보수
+nav_order: 2
+---
+
+# 추가 및 보완 기능 리스트
+- [ ] 전/후 포스팅 볼 수 있게
+- [ ] 네이버블로그, 유튜브, 인스타그램 링크 연결
+- [ ] 사이드에 프로필? (아직 고민중)
+- [x] 댓글기능 (utterances)
+- [x] jekyll theme 적용: Just the Docs

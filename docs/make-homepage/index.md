@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 홈페이지 구축하기
-nav_order: 3
+nav_order: 4
 has_children: true
 ---
 

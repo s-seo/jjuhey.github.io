@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 자주쓰는 업무관련 기능정리
+title: 자주쓰는 단축키/기능
 nav_order: 99
 ---
 
