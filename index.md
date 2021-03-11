@@ -15,8 +15,8 @@ This page is tech blog. I hope this blog to help many people to develop software
 Keyword: `Javascript`{: .label .label-purple } `Typescript`{: .label .label-purple } `Nodejs`{: .label .label-purple } `React`{: .label .label-purple } `Redux`{: .label .label-purple } `MongoDB`{: .label .label-purple } `HTML5`{: .label .label-purple } `CSS3`{: .label .label-purple } `Java`{: .label .label-yellow } `Oracle`{: .label .label-yellow } `Spring framework`{: .label .label-yellow }
 
 
-[GitHub](https://github.com/jjuhey){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Youtube](https://www.youtube.com/channel/UCATCOo6KRY3x6bna6z6P9dA){: .btn .fs-5 .mb-4 .mb-md-0 }
+<!-- [GitHub](https://github.com/jjuhey){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Youtube](https://www.youtube.com/channel/UCATCOo6KRY3x6bna6z6P9dA){: .btn .fs-5 .mb-4 .mb-md-0 } -->
 * * *
 
 # **앞으로의 포스팅 계획**

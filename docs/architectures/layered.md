@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Layered Architecture
 parent: 아키텍쳐(Architecture)
 nav_order: 1
@@ -15,6 +15,9 @@ nav_order: 1
 구글링을 해보면 많은 문서들이 3 레이어, 4 레이어 등등 다양하게 설명한다. MVC pattern과 혼동되게 설명놓은 곳도 많다. 물론 비슷한 점이 많지만, MVC는 내가 생각하기에 Java Web Application에 맞춰서 설계한 디자인 패턴에 가깝다. Layered Pattern은 이보다 더 큰 관점에서 아키텍쳐를 관찰하는 것이고, 그렇기 때문에 다양한 어플리케이션에 적용될 수 있다.
 
 나 같은 경우는 Nodejs, typescript, express를 사용하기 때문에 이러한 MVC pattern은 적용하기가 조금 애매한 감이 있다. 그래서 Layered Architecture의 큰 그림을 보고 어떻게 이 개념을 구체적으로  Nodejs Web Application에 적용할지를 바라봐야 할 것이다.
+
+계층형 아키텍쳐의 핵심은 **관심사의 분리**이다. 각 레이어는 특정한 관심사(혹은 역할)을 가지고 있으며, 서로 어떤 관심사를 가지고 있는지는 전혀 알지 못한다.
+마치 내가 내 어떤 업무를 시킬 사람을 고용하고 싶은데, 그 사람이 어떤 관심사가 있는지 어떤 취미가 있는지에 대해서는 전혀 알 필요가 없는 것 처럼 말이다. (예시가 좀 이상한가...?🤔)
 
 * * *
 
@@ -36,7 +39,7 @@ const controller = (req, res) => {
   }
 }
 ```
-* 클라이언트로 부터 들어온 요청/응답 처리 및 에러 핸들링
+* 클라이언트로 부터 들어온 요청/응답 처리, 서비스 호출 그리고 에러 핸들링
 
 * * *
 
@@ -60,7 +63,7 @@ const service = (title, content) => {
 ## Presistance Layer
 **영속성 계층, Repository, DAO**
 
-영속성 계층은 DataBase와 직접 통신하는 레이어이다. Repository나 MVC패턴의 DAO과 동일하다. 기본적으로 가장 원자단위의 일을 처리하며 그 일은 CRUD(Create, Read, Update, Delete)라고도 한다.
+영속성 계층은 DataBase와 직접 통신하는 레이어이다. Repository pattern이나 MVC패턴의 DAO과 동일하다. 기본적으로 가장 원자단위의 일을 처리하며 그 일은 CRUD(Create, Read, Update, Delete)라고도 한다.
 ```javascript
   const persistance = (document) => {
     return DataBase.save(document)
@@ -68,7 +71,7 @@ const service = (title, content) => {
 ```
 * CRUD 단위의 일을 처리, 데이터베이스와 직접 연결됨
 
-(위의 코드들은 예제를 위해 간이로 작성된 코드입니다!)
+(위의 코드들은 예제를 위해 간이로 작성된 코드입니다. 실제 프로젝트에 적용하는 예제가 아님을 명심해주세요.)
 
 * * *
 

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 자주쓰는 업무관련 기능정리
 nav_order: 99
 ---

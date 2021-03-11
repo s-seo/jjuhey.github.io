@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: mongoDB(atlas) 연결하기
 parent: 홈페이지 구축하기
 nav_order: 3
