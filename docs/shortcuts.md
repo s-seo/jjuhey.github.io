@@ -2,6 +2,7 @@
 layout: post
 title: 자주쓰는 단축키/기능
 nav_order: 99
+last_modified_date: '2021-03-07 19:00'
 ---
 
 # **단축키 정리**
