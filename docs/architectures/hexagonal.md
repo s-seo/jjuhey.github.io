@@ -49,10 +49,10 @@ const userService = (name, age, address) => {
     const user = new User(name, age, address)
     user.setRole('guest')
 
-    return database.create(user)
+    return MyDB.create(user)
 }
 ```
-위의 코드를 보면, database에 의존적이라는 것을 알 수 있다. 간단히 생각해서, database를 바꾸기 위해서는 서비스에 모든 database를 다른 데이터베이스로 바꿔야 한다. 이게 곧 service가 데이터베이스에 의존적이라는 의미이며 육각형 구조는 이 의존성을 줄이기 위해 Adapter/Port를 이용한다.
+위의 코드를 보면, 구체적인 DB에 의존적이라는 것을 알 수 있다. 간단히 생각해서, DB를 바꾸기 위해서는 서비스에서 call한 모든 `MyDB`를 다른 `OtherDB`로 바꿔야 한다. 이게 곧 service가 특정 데이터베이스에 의존적이란 의미이며 육각형 구조는 이 의존성을 줄이기 위해 Adapter/Port를 이용한다.
 
 어떻게 Adapter/Port를 이용할 수 있는지 살펴보자.
 
@@ -67,7 +67,7 @@ const userService = (name, age, address) => {
     return userPort.createUser(user)
 }
 ```
-비지니스 레이어에서는 구체적인 database를 부르는 대신 추상화된 userPort를 부른다.
+비지니스 레이어에서는 구체적인 `myDB`를 부르는 대신 추상화된 userPort를 부른다.
 
 ```javascript
 // Port
@@ -90,17 +90,17 @@ class UserAdapter implements UserPort {
   }
 }
 ```
-Port는 인터페이스, Adapter는 Port를 implements하여 구체적인 dataBase를 주입받아 기능을 구현한다.
+Port는 인터페이스이며, Adapter는 Port를 implements하여 DB를 주입받아 기능을 구현한다.
 
 실제로 적용할 때에는 runtime에서 Adapter를 바인딩해줄 수 있는 DI(Dependency Injection) container를 구현하거나 DI library를 이용할 수 있다.
-`const userPort = new UserAdapter(mongoDB)` 이런식으로 주입해줘야 한다. 자세한 이야기는 DI에 대해 이야기해볼 때 다뤄보겠다.
+`const userPort = new UserAdapter(MyDB)` 이런식으로 주입해줘야 한다. 자세한 이야기는 DI에 대해 이야기해볼 때 다뤄보겠다.
 
 
 정리해보자면,
 1. Port: 추상화된 인터페이스. 비지니스 계층에서는 이 포트를 가져다 쓴다.
 2. Adapter: Port를 상속받아 구현한 구현체. 여기에서 Outer layer를 직접 구현하고 가져다 쓴다.
-  * Inbound Adapter: Presentation layer와 연결해주는 어뎁터
-  * Outbound Adapter: Persistance layer, 외부 엔진(가져다 써야하는!!)을 연결해주는 어뎁터
+  * Inbound Adapter: Presentation layer, 혹은 우리 API를 가져다 쓰는 외부 클라이언트 등을 연결해주는 어뎁터
+  * Outbound Adapter: Persistance layer, 혹은 우리가 가져다 쎠야 하는 외부 엔진을 연결해주는 어뎁터
 
 육각형 구조로 Adapter/Port를 적용하면 2가지 이점을 가진다.
 1. **유지보수가 용이하다.**
