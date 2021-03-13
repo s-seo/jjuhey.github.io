@@ -25,7 +25,7 @@ This page is tech blog. I hope this blog to help many people to develop software
 # **앞으로의 포스팅 계획**
 {: .fs-7 }
 포스팅이 시작 혹은 완료되면 링크를 걸어놓을 예정입니다. 링크가 없으면, 아직 포스팅이 되지 않은 글입니다.
-* [시리즈] 개인홈페이지 구축 및 배포하기
+* [[시리즈] 개인홈페이지 구축 및 배포하기](docs/make-homepage)
 * [시리즈] 사이드브로젝트
 * 코딩테스트 후기
 * 이론 공부하기: Javascript, Typescript 등등

@@ -1,28 +1,26 @@
 ---
 layout: post
-title: Introduction(개요)
+title: Introduction
 parent: Node.js 웹앱 구축 & Heroku 배포
 nav_order: 1
 last_modified_date: '2021-03-13 13:43'
 ---
 
-## 개요 및 배경
-
-
+## 개요 및 개발 계획
 
 ### 목표
 Node.js로 개발 환경 셋팅부터 배포까지 모두 경험해본다.
-server/client 구축 예정이며, 서버는 express를 사용하고 클라이언트는 create-react-app을 이용하여 초기셋팅 할 예정이다.
+server/client 구축 예정이며, 서버는 [express](https://expressjs.com/ko/)를 사용하고 클라이언트는 [create-react-app](https://ko.reactjs.org/docs/create-a-new-react-app.html)을 이용하여 초기셋팅 할 예정이다.
 배포툴은 heroku를 이용할 예정이며, 모든 개발환경 및 배포는 일단 초보가 하기에 가장 쉬운 것 기준으로 하였다.
 
 완성작 또한 개인홈페이지 구축을 목표로 하고 있기 때문에, 이를 이용해 포트폴리오로 활용할 수 있다.
 더 나아가서 추후에 시간이 된다면, heroku에서 AWS로 옮기는 작업도 해보고 싶다.
 
 ### 개발환경
-* Language: javascript(nodejs), typescript
-* Databse: MongoDB
-* Framework/Library: Express, create-react-app, material-ui
-* Deploy: Heroku
+* Language: javascript(nodejs), [typescript](https://www.typescriptlang.org)
+* Databse: [MongoDB](https://docs.mongodb.com/manual/introduction/)
+* Framework/Library: Express, create-react-app, [material-ui](https://material-ui.com)
+* Deploy: [Heroku](http://heroku.com)
 * IDE: VSCode
 * Compouter: Macbook pro
 
@@ -67,4 +65,4 @@ server/client 구축 예정이며, 서버는 express를 사용하고 클라이�
 이미 개발환경 구축과 배포 테스트까지 완료했다. mongoDB를 배포환경에서 사용 설정하는게 꽤 오래걸렸지만.. 성공했으니, 이제 기능개발에 집중할 수 있는 환경이 다 갖춰졌다!
 
 다만, 여태까지 한 것들을 좀더 잘 정리해서 블로그에 기록해두기 위해 github블로그도 이렇게 지난주에 만들었다!!
-기능 개발은 일단 잠시 미뤄두고 여태까지 작업한 개발환경 및 배포환경 셋팅을 어떻게 할지 차근히 포스팅 할 생긱이다.
+기능 개발은 일단 잠시 미뤄두고 여태까지 작업한 개발환경 및 배포환경 셋팅을 어떻게 할지 차근히 포스팅 할 생각이다.
