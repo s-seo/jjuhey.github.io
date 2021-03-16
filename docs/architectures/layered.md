@@ -4,6 +4,9 @@ title: Layered Architecture
 parent: 아키텍쳐(Architecture)
 nav_order: 1
 last_modified_date: '2021-03-11 22:00'
+sitemap:
+changefreq: monthly
+priority: 0.8
 ---
 # Layered Architecture
 **계층형 아키텍쳐**
