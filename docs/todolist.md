@@ -4,8 +4,9 @@ title: 블로그 유지보수
 nav_order: 2
 last_modified_date: '2021-03-12 08:50'
 sitemap:
-changefreq: monthly
-priority: 0.8
+    changefreq: monthly
+    priority: 0.8
+    lastmod: 2021-03-16 22:00
 ---
 
 ## **추가 및 보완 기능 리스트**

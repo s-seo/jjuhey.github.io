@@ -16,7 +16,7 @@
 title: JJuhey's Blog
 description: tech blog for fullStack developer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://jjuhey.github.io # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jjuhey.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
@@ -97,7 +97,7 @@ color_scheme: nil
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
+  # - jekyll-sitemap
 
 kramdown:
   syntax_highlighter_opts:
