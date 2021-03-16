@@ -1,3 +1,4 @@
+
 ---
 layout: post
 title: Introduction
@@ -11,7 +12,7 @@ last_modified_date: '2021-03-13 13:43'
 ### 목표
 Node.js로 개발 환경 셋팅부터 배포까지 모두 경험해본다.
 server/client 구축 예정이며, 서버는 [express](https://expressjs.com/ko/)를 사용하고 클라이언트는 [create-react-app](https://ko.reactjs.org/docs/create-a-new-react-app.html)을 이용하여 초기셋팅 할 예정이다.
-배포툴은 heroku를 이용할 예정이며, 모든 개발환경 및 배포는 일단 초보가 하기에 가장 쉬운 것 기준으로 하였다.
+배포툴은 [Heroku](http://heroku.com)를 이용할 예정이며, 모든 개발환경 및 배포는 일단 초보가 하기에 가장 쉬운 것 기준으로 하였다.
 
 완성작 또한 개인홈페이지 구축을 목표로 하고 있기 때문에, 이를 이용해 포트폴리오로 활용할 수 있다.
 더 나아가서 추후에 시간이 된다면, heroku에서 AWS로 옮기는 작업도 해보고 싶다.
@@ -19,7 +20,7 @@ server/client 구축 예정이며, 서버는 [express](https://expressjs.com/ko/
 ### 개발환경
 * Language: javascript(nodejs), [typescript](https://www.typescriptlang.org)
 * Databse: [MongoDB](https://docs.mongodb.com/manual/introduction/)
-* Framework/Library: Express, create-react-app, [material-ui](https://material-ui.com)
+* Framework/Library: [express](https://expressjs.com/ko/), [create-react-app](https://ko.reactjs.org/docs/create-a-new-react-app.html), [material-ui](https://material-ui.com)
 * Deploy: [Heroku](http://heroku.com)
 * IDE: VSCode
 * Compouter: Macbook pro
