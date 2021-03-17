@@ -1,5 +1,7 @@
 ---
 layout: null
+sitemap:
+  exclude: 'yes'
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -7,7 +9,7 @@ layout: null
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
       {% if post.lastmod == null %}
-        <lastmod>{{ '2021-01-01 00:00' }}</lastmod>
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
       {% else %}
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
       {% endif %}
