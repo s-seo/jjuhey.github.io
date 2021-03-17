@@ -9,7 +9,7 @@ sitemap:
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
       {% if post.lastmod == null %}
-        <lastmod>2021-01-01</lastmod>
+        <lastmod>2021-01-07</lastmod>
       {% else %}
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
       {% endif %}

@@ -18,4 +18,4 @@ sitemap:
 - [ ] 구글 애널리틱스로 방문자 유입 분석
 - [ ] 사이드에 프로필? (아직 고민중)
 - [x] 댓글기능 (utterances)
-- [x] jekyll theme 적용: Just the Docs
+- [x] jekyll theme 적용: [Just the Docs](https://github.com/pmarsceill/just-the-docs)
