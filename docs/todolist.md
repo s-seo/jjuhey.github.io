@@ -14,10 +14,11 @@ sitemap:
 - [ ] 전/후 포스팅 볼 수 있게
 - [ ] 네이버블로그, 유튜브, 인스타그램 링크 연결
 - [ ] 스타일 커스터마이징
-- [ ] 구글 검색 노출 (sitemap.xml):
-    * https://yammong.github.io/blog/Githubio구글검색노출시키기
-    * http://dveamer.github.io/homepage/Sitemap.html
-    * `sitemap.xml`의 post경로 지정을 주의!!
+- [ ] 구글 검색 노출 (sitemap.xml)
+    * References:
+        * https://yammong.github.io/blog/Githubio구글검색노출시키기
+        * http://dveamer.github.io/homepage/Sitemap.html
+        * `sitemap.xml`의 post경로 지정을 주의!!
 - [ ] 구글 애널리틱스로 방문자 유입 분석
 - [ ] 사이드에 프로필? (아직 고민중)
 - [x] 댓글기능 (utterances)
