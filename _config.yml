@@ -96,7 +96,6 @@ color_scheme: nil
 # ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
 plugins:
-  - jekyll-sitemap
   - jekyll-seo-tag
 
 kramdown:
