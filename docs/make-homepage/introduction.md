@@ -7,7 +7,7 @@ last_modified_date: 2021-03-13 13:43
 lastmod: 2021-03-13 13:43
 ---
 
-## 개요 및 개발 계획
+# **개요 및 개발 계획**
 
 ### 목표
 Node.js로 개발 환경 셋팅부터 배포까지 모두 경험해본다.
@@ -27,7 +27,7 @@ server/client 구축 예정이며, 서버는 [express](https://expressjs.com/ko/
 
 ### 개발 기능
 (개발완료: **bold**, 포스팅완료: <span class='text-purple-000'>link+purple<span>)
-* 개발환경 구축
+* 개발환경 구축 & 초기 세팅
   * **create-react-app를 이용한 client측 구현**
   * **express를 이용한 server측 구현**
   * **git remote repository 생성 및 Pull Request 관리**

@@ -24,7 +24,7 @@ lastmod: 2021-03-17 11:11
 * 차라리 아예 새로운 sitemap을 생성해보자고 생각해서, `sitemap2.xml`을 만들고 사이트맵에 추가했더니, 잘나온다.
 * 아직도 문제가 무엇인지 정확하게 파악은 못했지만, 구글이 인식을 먼가 잘못하고 있는 느낌이다.
   * `sitemap.xml`의 경우 유형이 <span class='text-purple-000'>'Sitemap 색인'</span>으로 되어있고,
-  * 성공한 `sitemap2.xml`의 경우 유형이 <span class='text-purple-000'>'Sitemap'</sapn>으로 되어있다.
+  * 성공한 `sitemap2.xml`의 경우 유형이 <span class='text-purple-000'>'Sitemap'</span>으로 되어있다.
 * Possible Cause
   1. sitemap plug-in과의 충돌
   2. google에서 `sitemap.xml`을 잘못 인식
