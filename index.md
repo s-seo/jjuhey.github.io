@@ -4,6 +4,9 @@ title: Home
 nav_order: 1
 description: ""
 permalink: /
+sitemap:
+  priority: 0.8
+  changefreq: weekly
 ---
 
 # Welcome. Anyone

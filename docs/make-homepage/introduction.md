@@ -4,10 +4,7 @@ title: Introduction
 parent: Node.js 웹앱 구축 & Heroku 배포
 nav_order: 1
 last_modified_date: 2021-03-13 13:43
-date: 2021-03-13
-sitemap:
-changefreq: monthly
-priority: 0.8
+lastmod: 2021-03-13 13:43
 ---
 
 ## 개요 및 개발 계획

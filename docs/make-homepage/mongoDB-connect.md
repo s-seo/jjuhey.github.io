@@ -3,9 +3,6 @@ layout: post
 title: mongoDB(atlas) 연결하기
 parent: Node.js 웹앱 구축 & Heroku 배포
 nav_order: 3
-sitemap:
-changefreq: monthly
-priority: 0.8
 ---
 
 ## MongoDB 연결하기

@@ -3,11 +3,8 @@ layout: post
 title: Hexagonal Architecture
 parent: 아키텍쳐(Architecture)
 nav_order: 2
-last_modified_date: '2021-03-12 23:20'
-sitemap:
-    changefreq: monthly
-    priority: 0.8
-    lastmod: 2021-03-16 22:00
+last_modified_date: 2021-03-12 23:20
+lastmod: 2021-03-12 23:20
 ---
 
 # Hexagonal Architecture
