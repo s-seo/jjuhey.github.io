@@ -1,24 +1,24 @@
 ---
 layout: post
 title: Layered Architecture
-parent: 아키텍쳐(Architecture)
+parent: 아키텍처(Architecture)
 nav_order: 1
 last_modified_date: 2021-03-11 22:00
 lastmod: 2021-03-11 22:00
 ---
 # Layered Architecture
-**계층형 아키텍쳐**
+**계층형 아키텍처**
 
 계층형의 기본적인 컨셉은 MVC pattern과 유사하다. Model, View, Contoller가 각각 레이어로 볼 수 있으며, 각각의 레이어는 특정한 "역할"을 수행하는 것에 있어서 그 핵심적인 개념이 같다.
 
 ![Layered Architecture](../../../assets/images/architecture_layered.png)
 
-구글링을 해보면 많은 문서들이 3 레이어, 4 레이어 등등 다양하게 설명한다. MVC pattern과 혼동되게 설명놓은 곳도 많다. 물론 비슷한 점이 많지만, MVC는 내가 생각하기에 Java Web Application에 맞춰서 설계한 디자인 패턴에 가깝다. Layered Pattern은 이보다 더 큰 관점에서 아키텍쳐를 관찰하는 것이고, 그렇기 때문에 다양한 어플리케이션에 적용될 수 있다.
+구글링을 해보면 많은 문서들이 3 레이어, 4 레이어 등등 다양하게 설명한다. MVC pattern과 혼동되게 설명놓은 곳도 많다. 물론 비슷한 점이 많지만, MVC는 내가 생각하기에 Java Web Application에 맞춰서 설계한 디자인 패턴에 가깝다. Layered Pattern은 이보다 더 큰 관점에서 아키텍처를 관찰하는 것이고, 그렇기 때문에 다양한 어플리케이션에 적용될 수 있다.
 
 나 같은 경우는 Nodejs, typescript, express를 사용하기 때문에 이러한 MVC pattern은 적용하기가 조금 애매한 감이 있다. 그래서 Layered Architecture의 큰 그림을 보고 어떻게 이 개념을 구체적으로  Nodejs Web Application에 적용할지를 바라봐야 할 것이다.
 
-계층형 아키텍쳐의 핵심은 **관심사의 분리**이다. 각 레이어는 특정한 관심사(혹은 역할)을 가지고 있으며, 서로 어떤 관심사를 가지고 있는지는 전혀 알지 못한다.
-마치 내가 내 어떤 업무를 시킬 사람을 고용하고 싶은데, 그 사람이 어떤 관심사가 있는지 어떤 취미가 있는지에 대해서는 전혀 알 필요가 없는 것 처럼 말이다. (예시가 좀 이상한가...?🤔)
+계층형 아키텍처의 핵심은 **관심사의 분리**이다. 각 레이어는 특정한 관심사(혹은 역할)을 가지고 있으며, 서로 어떤 관심사를 가지고 있는지는 전혀 알지 못한다.
+마치 내가 내 어떤 업무를 시킬 사람을 고용하고 싶은데, 그 사람이 어떤 관심사가 있는지 어떤 취미가 있는지에 대해서는 전혀 알 필요가 없는 것 처럼 말이다. (예시가 좀 이상한가...?🤔응. 이상하다. 그냥 넘어가자.)
 
 * * *
 
@@ -78,7 +78,7 @@ const service = (title, content) => {
 
 ## 특징 정리
 1. **관심사의 분리 (Separation of concern)**: 각각의 레이어는 모두 특별한 역할이 있으며, 서로 다른 레이어의 역할에 관심을 갖지 않는다.
-2. 추가적으로 Domain Model(Entity, VO, DTO) layer, Infrastructure layer, Application Layer 등이 있으나, 이후에 나올 다른 아키텍쳐에도 비슷한 개념이 나오며 Layered Architecture의 개념을 조금 헷갈리게 할 수 있으므로 생략하였다.
+2. 추가적으로 Domain Model(Entity, VO, DTO) layer, Infrastructure layer, Application Layer 등이 있으나, 이후에 나올 다른 아키텍처에도 비슷한 개념이 나오며 Layered Architecture의 개념을 조금 헷갈리게 할 수 있으므로 생략하였다.
 
 
 

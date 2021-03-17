@@ -32,6 +32,6 @@ This page is tech blog. I hope this blog to help many people to develop software
 * [시리즈] 사이드브로젝트
 * 코딩테스트 후기
 * 이론 공부하기: Javascript, Typescript 등등
-* [아키텍쳐: Layered, Hexagonal, Clean Architecture에 대해서](docs/architectures)
+* [아키텍처: Layered, Hexagonal, Clean Architecture에 대해서](docs/architectures)
 * [오답노트(trouble shooting)](docs/trouble-shooting)
 * [업무관련 단축키 및 자주쓰는 기능](docs/shortcuts) -->
