@@ -28,7 +28,8 @@ server/client 구축 예정이며, 서버는 [express](https://expressjs.com/ko/
 ### 개발 기능
 (개발완료: **bold**, 포스팅완료: <span class='text-purple-000'>link+purple<span>)
 * 개발환경 구축 & 초기 세팅
-  * **create-react-app를 이용한 client측 구현**
+  * **[Tool 및 환경 구축하기](docs/make-homepage/develop-env)**
+  * **[create-react-app를 이용한 client측 구현](docs/make-homepage/client-setting)**
   * **express를 이용한 server측 구현**
   * **git remote repository 생성 및 Pull Request 관리**
   * **client & server를 연결하기 위한 proxy 설정**

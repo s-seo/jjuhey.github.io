@@ -53,6 +53,7 @@ Node Version Manage: 노드 버전을 관리해준다. node, npm 등을 관리�
 * iterm: [https://iterm2.com/](https://iterm2.com/)
 
 2. VSCode 설치: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+* 유용한 extension: `Babel JavaScript`, `Beautify`, `Bracket Pair Colorizer2`, `bracket-padder`, `colorize`, `CSS Modules`, `CSScomb`, `Debugger for Chrome`, `ESLint`, `file-icons`, `Git History`, `gitignore`, `GitLens`, `IntelliSense for CSS class`, `JS JSX Snippets`, `Prettier ESLint`, `Sass`, `TODO Highlight`, `TSLint`
 
 3. git 설치
 `brew install git`
