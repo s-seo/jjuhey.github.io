@@ -20,11 +20,12 @@ lastmod: 2021-03-18 20:40
     ├ package.json
     ├ 📁 public
     ├ README.md
+    ├ .gitignore
     ├ 📁 src
     ⎣ yarn.lock
     ```
     * package.json과 yarn.lock은 우리가 설치한 패키지에 대한 정보와 초기 설정에 대한 정보를 가지고 있다.
-    * README.md는 깃허브 레포에 들어가면 처음 보이는 그 문서이다.
+    * README.md는 깃허브 레포에 들어가면 처음 보이는 그 문서이다. ([마크다운](https://gist.github.com/ihoneymon/652be052a0727ad59601)에 문법을 쓴다.)
     * src에 가장 중요한 우리 어플리케이션의 index.js, App.js가 있다.
 4. `cd my-app` & `yarn start`: 어플리케이션을 실행해본다.
     <img width="500" alt="create-react-app" src="https://user-images.githubusercontent.com/53938072/111625289-080fe800-8830-11eb-81a7-7a95843ff9a0.png">
@@ -37,16 +38,16 @@ lastmod: 2021-03-18 20:40
 1. github 홈페이지로 이동한다.
 2. Repositories의 우측에 있는 `new`를 눌러준다.
 3. 아래와 같이 어플 이름을 입력하고, public으로 만들어준다.
-    <img width="400" alt="스크린샷 2021-03-18 오후 9 06 13" src="https://user-images.githubusercontent.com/53938072/111626802-c122f200-8831-11eb-9010-75ff549b9c89.png">
+    <img width="700" alt="스크린샷 2021-03-18 오후 9 06 13" src="https://user-images.githubusercontent.com/53938072/111626802-c122f200-8831-11eb-9010-75ff549b9c89.png">
     * 남들이 내 레포를 보지 않기를 바란다면, private으로 만들어준다.
     * 이번 시리즈는 heroku를 통해 배포까지 진행할 예정이므로 public으로 만들도록 하겠다.
 4. 아래와 같이 새로운 레포가 생성되는 것을 볼 수 있다!
-    <img width="500" alt="my remote repository" src="https://user-images.githubusercontent.com/53938072/111625312-0e9e5f80-8830-11eb-98ce-95659f98dec6.png">
+    <img width="700" alt="my remote repository" src="https://user-images.githubusercontent.com/53938072/111625312-0e9e5f80-8830-11eb-98ce-95659f98dec6.png">
 5. 터미널에 내 my-app의 루트에서(`cd my-app`) 다음과 같이 입력한다.
     ```
     git remote add origin git@github.com:JJuhey/my-app.git
     ```
 6. `git push -u origin master`: 원격 레포로 푸시한다.
 7. 깃허브 레포로 들어가면 내 로컬에 만들어진 파일들이 그대로 올라간 것을 볼 수 있다!
-    <img width="500" alt="uploaded" src="https://user-images.githubusercontent.com/53938072/111625323-11995000-8830-11eb-8485-ba92bfae031a.png">
+    <img width="700" alt="uploaded" src="https://user-images.githubusercontent.com/53938072/111625323-11995000-8830-11eb-8485-ba92bfae031a.png">
 
