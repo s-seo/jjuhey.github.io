@@ -37,7 +37,7 @@ lastmod: 2021-03-18 20:40
 1. github 홈페이지로 이동한다.
 2. Repositories의 우측에 있는 `new`를 눌러준다.
 3. 아래와 같이 어플 이름을 입력하고, public으로 만들어준다.
-    <img width="400" alt="new repository" src="https://user-images.githubusercontent.com/53938072/111625303-0ba36f00-8830-11eb-8124-a2d538fd6f3a.png">
+    <img width="400" alt="스크린샷 2021-03-18 오후 9 06 13" src="https://user-images.githubusercontent.com/53938072/111626802-c122f200-8831-11eb-9010-75ff549b9c89.png">
     * 남들이 내 레포를 보지 않기를 바란다면, private으로 만들어준다.
     * 이번 시리즈는 heroku를 통해 배포까지 진행할 예정이므로 public으로 만들도록 하겠다.
 4. 아래와 같이 새로운 레포가 생성되는 것을 볼 수 있다!
