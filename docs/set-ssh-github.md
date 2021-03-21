@@ -14,7 +14,7 @@ lastmod: 2021-03-21 13:54
 2. `chmod 700 ~/.ssh`
 3. `ssh-keygen -t rsa -b 4096 -C <email주소>`
     * github계정의 email주소로 ssh를 생성해준다.
-4. 파일 이름을 바꿀것인지 물어보는데, 처음 만드는 것이라면 default(id_rsa)로 그냥 만든다.
+4. 파일 이름을 바꿀것인지 물어보는데, 처음 만드는 것이라면 default(id_rsa)로 그냥 만든다. (걍 엔터치면 됨)
 5. 패스워드 입력
 6. `ls -l`: 키 파일(id_rsa, id_rsa.pub)이 생성되었는지 확인한다.
 * * * 
@@ -48,7 +48,7 @@ lastmod: 2021-03-21 13:54
 	  User JJuhey
 	  IdentityFile ~/.ssh/id_rsa_personal2
     ```
-    * 여기서 중요한 부분은 Host와 IdentityFile이다. git clone할 때, Host를 가지고 그에 해당하는 키를 찾게된다.
+    * 여기서 중요한 부분은 <span class='text-purple-000'>**Host**</span>와 <span class='text-purple-000'>**IdentityFile**</span>이다. git clone할 때, Host를 가지고 그에 해당하는 키를 찾게된다.
 4. git clone시에 특정 ssh key를 사용하도록 설정
     ```shell
     git clone git@github.com-personal:repo_user/repo_name.git
