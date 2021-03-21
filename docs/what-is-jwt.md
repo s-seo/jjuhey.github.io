@@ -11,7 +11,7 @@ lastmod: 2021-03-20 23:56
 ## Intro
 Nodejs로 Backend를 구현할 때, jwt를 이용해서 토큰을 생성해주게 된다. 회사에서도 이 jwt를 사용하는 것 같은데, 내가 초기 셋팅을 하지 않아서 한번도 다뤄본적은 없다. 그래서 이번에 내 개인홈페이지를 구축할 때, 처음 jwt를 마주하게(?) 되었는데.. 그냥 쓰기보다 제대로 알고서 써보자 싶어서 이렇게 포스팅하게 되었다.
 
-## What is jwt?
+## What is JWT?
 > **JSON Web Tokens**: an open standard(RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object.`
 
 정보를 JSON 객체로 안전하게 전송하기 위해 컴팩트하고 독립적인 방식을 정의하는 개방형 표준이라고 한다.
@@ -104,5 +104,5 @@ npm install jsonwebtoken
 
 ### Apply to my Web
 1. 로그인할 때, 토큰을 생성해서 저장(DB & frontend)한다.
-2. 유저의 요청이 들어올 때마다 미들웨어에서 token이 일치하는지 확인 후 요청을 처리한다.
+2. 유저의 요청이 들어올 때마다 미들웨어에서 token이 일치하는지 확인 후 요청을 처리한다. (middleware)
 3. 로그아웃할 때, 토큰을 reset시켜준다.
