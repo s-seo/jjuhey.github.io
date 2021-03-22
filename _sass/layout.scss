@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   background-color: $sidebar-color;
 
-  @include mq(md) {
+  @media (min-width: 800px) { // @include mq(md)
     flex-wrap: nowrap;
     position: fixed;
     width: $nav-width-md;
