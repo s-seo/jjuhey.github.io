@@ -108,5 +108,7 @@ hr {
 }
 
 .utterances {
-  max-width: 800px !important;
+  @media (min-width: 800px) {
+    width: 90% !important;
+  }
 }
