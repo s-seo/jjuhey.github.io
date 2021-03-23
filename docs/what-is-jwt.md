@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: JWT(JSON web token)란?
 nav_order: 89
 last_modified_date: 2021-03-20 23:56
