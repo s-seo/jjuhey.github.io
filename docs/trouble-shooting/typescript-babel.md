@@ -10,7 +10,7 @@ lastmod: 2021-03-27 15:20
 ## Typescript & Import/Export 사용하기
 
 ### **Problem**
-* 요즘 Heroku로 개인홈페이지 구축하는 사이드 프로젝트 진행중이다. [참고](../make-homepage)
+* 요즘 Heroku로 개인홈페이지 구축하는 사이드 프로젝트 진행중이다. [참고](https://jjuhey.github.io/docs/make-homepage/)
 * 프론트엔드는 `create-react-app`으로 간단하게 만들 수 있었는데, 백엔드 같은 경우는 내가 다 하나하나 설정해줘야 하니 어지간히 힘든게 아니다. (갑분 찡찡;;)
 * 암튼 지금은 `javascript`로 적용된 코드들을 정확한 타입을 사용해서 디버깅이 쉽게 되도록 `typescript`로 바꾸고 싶었다.
     ```
@@ -21,7 +21,7 @@ lastmod: 2021-03-27 15:20
     const express = require('express') // 기존에 이렇게 쓰여있던 걸
     import express from 'express' // 이렇게 바꾸고 싶다!
     ```
-* typescript까지는 잘 적용되었는데, 자꾸 Unexpected identifier가 일어났다. (<span class='text-purple-000'>STEP 3</span>으로 해결했다.)
+* typescript까지는 잘 적용되었는데, 자꾸 Unexpected identifier가 일어났다. ([STEP 3](https://jjuhey.github.io/docs/trouble-shooting/typescript-babel/#step-3--%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%88%98%EC%A0%95)로 해결했다.)
     ```shell
     import express from 'express';
            ^^^^^^^
@@ -112,14 +112,13 @@ lastmod: 2021-03-27 15:20
     ```
 
 ### STEP 3 | 스크립트 수정
-    ```json
-    {
-      // ...
-      "scripts": {
-        "server": "nodemon --exec babel-node ./server/index.ts --extensions '.ts'",
-      }
-
-      // ...
-    }
-    ```
 * 이 부분에서 계속 안되서 삽질을 했는데... babel 깃허브에 저렇게 `--extension '.ts'`를 키워드로 써주니 바로 해결되었다. [참고](https://github.com/babel/babel/issues/9301#issuecomment-466685472)
+  ```json
+  {
+    // ...
+    "scripts": {
+      "server": "nodemon --exec babel-node ./server/index.ts --extensions '.ts'",
+    }
+    // ...
+  }
+  ```
