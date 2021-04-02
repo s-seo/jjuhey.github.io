@@ -143,7 +143,7 @@ return (
 * * *
 ### **Format에 따라 calendar형태 자동으로 바꾸기**
 dateFormat에 따라서 datepicker의 캘린더 형태(datepicker, monthpicker, yearpicker...)가 자동으로 설정될 수 있도록 하였다.
-```typescript
+```tsx
 let dateProps: Partial<ReactDatePickerProps> = { dateFormat: format }
 switch (fomat) {
   case 'yyyy-MM-dd hh:mm':
