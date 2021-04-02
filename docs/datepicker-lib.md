@@ -15,8 +15,9 @@ lastmod: 2021-04-02 17:36
 > yarn upgrade @types/react-datepicker@^3.1.8
 ```
 버전에 대한 정보는 npm에 들어가면 볼 수 있는데 ([참고](https://www.npmjs.com/package/react-datepicker)) 여기에서 가장 최신 버전이면서 최근 다운로드수가 많은 버전을 선택해서 올려줬다. 아참! 또다른 주의해야 할 점은 node나 react버전에 따라서 지원하는 버전이 다를 수 있으므로 체크하는 것이 좋다.
-<img width="700" alt="react-datepicker version" src="https://user-images.githubusercontent.com/53938072/113419579-b1470880-9402-11eb-91b2-b0c5f70b6e52.png">
-공식문서에 이렇게 친절하게 나와있으니 참고하면 된다.
+<img width="800" alt="스크린샷 2021-04-02 오후 5 42 59" src="https://user-images.githubusercontent.com/53938072/113420049-97f28c00-9403-11eb-8469-786053f6abeb.png">
+
+👉 공식문서에 이렇게 친절하게 나와있으니 참고하면 된다.
 
 * * *
 
@@ -40,7 +41,7 @@ const DatePickerWrapper = ({ onChangeDate }: PropsType) => {
 
 ### **DatePicker Input 만들기**
 공식문서에 가면 이런식으로 커스텀 Input을 만들 수 있도록 지원해준다.
-<img width="700" alt="react-datepicker custom input" src="https://user-images.githubusercontent.com/53938072/113419589-b4da8f80-9402-11eb-86af-b9e8b677313c.png">
+<img width="800" alt="react-datepicker custom input" src="https://user-images.githubusercontent.com/53938072/113419589-b4da8f80-9402-11eb-86af-b9e8b677313c.png">
 
 reference를 이용해서 참조값을 전달해주도록 해야한다. 또한 타입스크립트를 사용중이라 타입을 설정해줘야 하는데,
 ```javascript
