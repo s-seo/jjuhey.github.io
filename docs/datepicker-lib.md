@@ -6,7 +6,7 @@ last_modified_date: 2021-04-02 17:36
 lastmod: 2021-04-02 17:36
 ---
 
-# **React DatePicker 업그레이드 & 커스텀 컴포넌트 만들기**
+# **React DatePicker 커스텀 컴포넌트 만들기**
 ## Version 업그레이드
 회사에서 [react-datepicker](https://reactdatepicker.com/)를 이용하고 있다. 날짜의 resolution에 따라서 다른 캘린더를 띄워주고 싶은데, 그게 예전버전에서는 지원이 안되는 것 같아 업그레이드를 진행하였다.
 (타입스크립트도 사용중이고 해당 라이브러리에서 지원하기 때문에 같이 버전업하였다.)
@@ -87,6 +87,7 @@ datepicker만 있으면 문제가 없는데, timepicker까지 사용한다면, �
 그러니까 하고싶은건
 1. date를 선택하면 팝업이 닫히지 않음
 2. time을 선택할 때 팝업이 닫혀야 함
+
 * `shouldCloseOnSelect={false}`: 기본적으로 팝업이 닫히지 않게 설정한다.
 * DatePicker의 show 여부를 제어하기 위해 ref를 할당해야한다.
   ```javascript
