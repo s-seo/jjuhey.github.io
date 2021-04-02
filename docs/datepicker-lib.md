@@ -127,6 +127,7 @@ datepicker만 있으면 문제가 없는데, timepicker까지 사용한다면, �
 ### **Range를 지원하도록 만들기**
 * 위에서 제어했던 것처럼 show 제어를 위해 두 캘린더 모두 ref값을 던져줬고, state도 각각 만들어준다.
 * isRange를 부모 컴포넌트에서 props로 받아서 range일때는 start calendar & end calendar를 둘다 볼 수 있도록 해준다.
+
 ```javascript
 const [startDate, setStartDate] = React.useState<Date>(defaultDate || new Date())
 const [endDate, setEndDate] = React.useState<Date>(defaultEndDate || defaultDate || new Date())
