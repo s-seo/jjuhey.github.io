@@ -23,8 +23,9 @@ lastmod: 2021-04-02 17:36
 
 ## DatePicker Customizing
 회사에서 사용하는 datepicker는 라이브러리 그대로를 사용하는 컴포넌트에 모두 그대로 import해와서 사용하였다. 그런데 이러면 공통적으로 설정해줘야하는 것을 모두 수동으로 해줘야하고, 사용하는 사람들마다 이 라이브러리에 대해 파악할 필요가 있는 등 여러가지 어려움이 있다.
-그래서 우리회사에서는 이렇게 라이브러리를 사용해야 할 때, 한번 우리 커스터마이징 컴포넌트를 하나 생성해서 우리가 자주 사용하는 기능과 props 등을 정의해서 사용한다.
-```typescript
+
+그래서 우리 회사에서는 이렇게 라이브러리를 사용해야 할 때, 한번 우리 커스터마이징 컴포넌트를 하나 생성해서 우리가 자주 사용하는 기능과 props 등을 정의해서 사용한다.
+```tsx
 import DatePicker from 'react-datepicker'
 const DatePickerWrapper = ({ onChangeDate }: PropsType) => {
   const onChange = (date: Date) => {
@@ -51,18 +52,21 @@ const CustomInput = React.forwardRef<HTMLInputElement, { value: any; onClick(): 
   ),
 )
 ```
-타입을 추측하기가 애매해서, 일단 이렇게 하면 에러도 안나고 잘 작동하긴 한다🤣 그리고 `customInput={<CustomInput />}`으로 해주면 된다.
+타입을 추측하기가 애매해서, 일단 이렇게 하면 에러도 안나고 잘 작동하긴 한다🤣 
+
+그리고 `customInput={<CustomInput />}`으로 해주면 된다.
 
 
 ### **Click 제어하기: Show DatePicker**
 datepicker만 있으면 문제가 없는데, timepicker까지 사용한다면, 문제가 발생한다. date를 클릭하면 팝업이 닫히게 된다. 최신 버전에서는 `showTimeSelect`는 문제가 없는데, `showTimeInput`에서는 어김없이 date를 클릭하면 팝업이 닫혀버린다.
+
 그러니까 하고싶은건
 1. date를 선택하면 팝업이 닫히지 않음
 2. time을 선택할 때 팝업이 닫혀야 함
 
 * `shouldCloseOnSelect={false}`: 기본적으로 팝업이 닫히지 않게 설정한다.
 * DatePicker의 show 여부를 제어하기 위해 ref를 할당해야한다.
-  ```javascript
+  ```tsx
   const [date, setDate] = useState(new Date());
   const calendar = useRef<DatePicker>(null)
 
@@ -76,7 +80,7 @@ datepicker만 있으면 문제가 없는데, timepicker까지 사용한다면, �
   );
   ```
 * `handleDate`에서 시간이 바뀌면 팝업이 닫히도록 설정했다.
-  ```javascript
+  ```typescript
   const handleDate = (changedDate: Date) => {
       onChangeDate(changedDate)
       setDate(changedDate)
@@ -100,7 +104,7 @@ datepicker만 있으면 문제가 없는데, timepicker까지 사용한다면, �
 * 위에서 제어했던 것처럼 show 제어를 위해 두 캘린더 모두 ref값을 던져줬고, state도 각각 만들어준다.
 * isRange를 부모 컴포넌트에서 props로 받아서 range일때는 start calendar & end calendar를 둘다 볼 수 있도록 해준다.
 
-```javascript
+```tsx
 const [startDate, setStartDate] = React.useState<Date>(defaultDate || new Date())
 const [endDate, setEndDate] = React.useState<Date>(defaultEndDate || defaultDate || new Date())
 const startCalendar = React.useRef<DatePicker>(null)
