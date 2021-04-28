@@ -21,6 +21,8 @@ lastmod: 2021-04-28 18:20
 ### **사용방법**
 간단하게 HighchartsWrapper 컴포넌트를 만들어서 사용할 수 있다.
 ```tsx
+import * as React from 'react'
+import * as Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import HC_more from 'highcharts/highcharts-more'
 import heatMap from 'highcharts/modules/heatmap'
@@ -28,11 +30,11 @@ import heatMap from 'highcharts/modules/heatmap'
 HC_more(Highcharts)
 heatMap(Highcharts)
 
-type PropsType = {
+interface PropsType = {
   options: Highcharts.Options;
 }
 
-const HighchartsWrapper = ({ options }: PropsType) => {
+const HighchartsWrapper: React.FC<PropsType> = ({ options }: PropsType) => {
   return (
     <HighchartsReact
       highcharts={Highcharts}
@@ -46,6 +48,7 @@ const HighchartsWrapper = ({ options }: PropsType) => {
 ### **Trouble Shooting**
 1. 문제점: A와 B를 나타내는 그래프가 있는데, 이걸 A->B로 바꿔도 제대로 바꿔지지 않았다. 마치 A에 B를 머지한 것처럼 그래프가 그려졌다. 
     * 이 문제는 highchart-react-official에서의 default 설정값이 `immutable={false}` 였기때문에 나타난 문제였다.
+
     ```tsx
     <HighchartsReact
       highcharts={highcharts}
@@ -77,6 +80,7 @@ const HighchartsWrapper = ({ options }: PropsType) => {
 
 3. 문제점: 타입스크립트 사용해야하는데, `Highcharts.Options`의 거의 모든 속성들이 Optional로 걸려있어서 이게 어지간히 짜증나는게 아니다. 계속 undefined될 경우를 처리해주어야 하고 series의 경우 타입유추가 조금 힘들어지는 상황이 발생한다.
     * 그래서 내가 새로 ChartOptions type을 만들어서 사용하고 있다.
+
     ```typescript
     import { Options, SeriesOptionsType } from 'highcharts'
 
