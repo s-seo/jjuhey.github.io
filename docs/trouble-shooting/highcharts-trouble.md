@@ -49,13 +49,13 @@ const HighchartsWrapper: React.FC<PropsType> = ({ options }: PropsType) => {
 1. 문제점: A와 B를 나타내는 그래프가 있는데, 이걸 A->B로 바꿔도 제대로 바꿔지지 않았다. 마치 A에 B를 머지한 것처럼 그래프가 그려졌다. 
     * 이 문제는 highchart-react-official에서의 default 설정값이 `immutable={false}` 였기때문에 나타난 문제였다.
 
-    ```tsx
-    <HighchartsReact
-      highcharts={highcharts}
-      options={options}
-      immutable={true}
-    />
-    ```
+      ```tsx
+      <HighchartsReact
+        highcharts={highcharts}
+        options={options}
+        immutable={true}
+      />
+      ```
     * immutable은 props가 업데이트 되었을 때 re-initialize시켜주는 것이다. 즉, 업데이트시 그래프를 다시 그려주기 위해 사용하는 설정값이다.
 
 2. 문제점: 원하는대로 legend의 grid를 그리고 싶다.
@@ -63,34 +63,34 @@ const HighchartsWrapper: React.FC<PropsType> = ({ options }: PropsType) => {
     * [colorAxis](https://api.highcharts.com/highcharts/colorAxis): 컬러로 뭔가 값을 표현해야할 때 쓰는데, 대부분 matrix 차트를 사용할 때 많이 쓴다.
     * [stops](https://api.highcharts.com/highcharts/colorAxis.stops): 컬러 그라데이션을 내가 지정한 색으로 하고싶을 때 쓴다.
     * [tickPositions](https://api.highcharts.com/highcharts/colorAxis.tickPositions): 축(x, y, color)에 해당하는 grid 표시를 내 맘대로 할 수 있게 해준다.
-    ```typescript
-    const options: Highcharts.Options = {
-      colorAxis: {
-        stops: [
-          [0, '#000000'],
-          [0.5, '#eeeeee'],
-          [1, '#ffffff'],
-        ],
-        tickPositions: [0, 0.25, 0.5, 0.75, 1],
-        min: 0,
-        max: 1,
-      },
-    }
-    ```
+      ```typescript
+      const options: Highcharts.Options = {
+        colorAxis: {
+          stops: [
+            [0, '#000000'],
+            [0.5, '#eeeeee'],
+            [1, '#ffffff'],
+          ],
+          tickPositions: [0, 0.25, 0.5, 0.75, 1],
+          min: 0,
+          max: 1,
+        },
+      }
+      ```
 
 3. 문제점: 타입스크립트 사용해야하는데, `Highcharts.Options`의 거의 모든 속성들이 Optional로 걸려있어서 이게 어지간히 짜증나는게 아니다. 계속 undefined될 경우를 처리해주어야 하고 series의 경우 타입유추가 조금 힘들어지는 상황이 발생한다.
     * 그래서 내가 새로 ChartOptions type을 만들어서 사용하고 있다.
 
-    ```typescript
-    import { Options, SeriesOptionsType } from 'highcharts'
+      ```typescript
+      import { Options, SeriesOptionsType } from 'highcharts'
 
-    export interface ChartOptions<T extends SeriesOptionsType> extends Options {
-      chart: ChartOptions,
-      xAxis: XAxisOptions[];
-      yAxis: YAxisOptions[];
-      series: T[];
-    }
-    ```
+      export interface ChartOptions<T extends SeriesOptionsType> extends Options {
+        chart: ChartOptions,
+        xAxis: XAxisOptions[];
+        yAxis: YAxisOptions[];
+        series: T[];
+      }
+      ```
     * 내 어플리케이션에서 무조건 `options`에 사용한다면, `ChartOptions`에 required로 명시해준다.
     * Series는 데이터값이 들어가는 속성이기 때문에 `T[]`라는 타입으로 정의해주면, 나중에 사용할 때 `const options: ChartOptions<SeriesAreaOptions>={...}`로 사용할 수 있다. 그러면 as를 이용한 type assertion을 일일이 해주지 않아도 된다.
 
